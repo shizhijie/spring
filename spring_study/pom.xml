@@ -49,5 +49,6 @@
 	<modules>
 		<module>spring-component-scanning-autowiring</module>
 		<module>spring-javaconfig</module>
+		<module>spring-component-javaconfig</module>
 	</modules>
 </project>
