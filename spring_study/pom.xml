@@ -51,7 +51,6 @@
 		<module>spring-javaconfig</module>
 		<module>spring-component-javaconfig</module>
 		<module>spring-xml</module>
-		<module>spring-导入和混合配置</module>
 		<module>spring-mixed</module>
 	</modules>
 </project>
