@@ -48,5 +48,6 @@
 	</dependencyManagement>
 	<modules>
 		<module>spring-component-scanning-autowiring</module>
+		<module>spring-javaconfig</module>
 	</modules>
 </project>
