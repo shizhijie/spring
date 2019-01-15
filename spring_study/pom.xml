@@ -76,5 +76,6 @@
 		<module>spring-profile-advanced-assembly</module>
 		<module>spring-conditional-bean-spring4After</module>
 		<module>spring-ambiguous-beans</module>
+		<module>spring-scope-beans</module>
 	</modules>
 </project>
