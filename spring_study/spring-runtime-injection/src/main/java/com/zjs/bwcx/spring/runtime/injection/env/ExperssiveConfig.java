@@ -1,4 +1,4 @@
-package com.zjs.bwcx.spring.runtime.injection;
+package com.zjs.bwcx.spring.runtime.injection.env;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

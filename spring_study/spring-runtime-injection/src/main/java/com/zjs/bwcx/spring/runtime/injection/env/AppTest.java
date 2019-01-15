@@ -1,4 +1,4 @@
-package com.zjs.bwcx.spring.runtime.injection;
+package com.zjs.bwcx.spring.runtime.injection.env;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
