@@ -1,21 +1,26 @@
 package com.zjs.bwcx.spring.ambiguous.custom.qualifier;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Beans {
 	
-	@SuppressWarnings("unused")
 	private Dssert dssert;
 	
 	@Autowired
-	//@Qualifier("iceCream")
+	//@Qualifier("cold")
 	//@Qualifier("cake")
-	@Qualifier("cookies")
+	//@Qualifier("cookies")
+	//@Qualifier("shizhijie") 用在javaconfig的方法之上的限定符
+	@Cold
+	//@Creamy
+	@Fruity
 	public void setDssert(Dssert dssert) {
 		this.dssert = dssert;
 	}
-	
+
+	public Dssert getDssert() {
+		return dssert;
+	}
 }

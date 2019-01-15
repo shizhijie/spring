@@ -1,4 +1,4 @@
-package com.zjs.bwcx.spring.ambiguous.xml;
+package com.zjs.bwcx.spring.ambiguous.nomal;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

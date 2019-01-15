@@ -9,7 +9,7 @@ public class App {
 		
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
 		Beans bean = (Beans) applicationContext.getBean("beans");
-		System.out.println(bean);
+		System.out.println(bean.getDssert());
 	}
 	
 }

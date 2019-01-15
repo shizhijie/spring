@@ -1,4 +1,4 @@
-package com.zjs.bwcx.spring.ambiguous.custom.qualifier;
+package com.zjs.bwcx.spring.ambiguous.nomal;
 
 import org.springframework.stereotype.Component;
 

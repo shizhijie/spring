@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import com.zjs.bwcx.spring.ambiguous.javaconfig.Dssert;
+
 @Component
 public class Beans {
 	
@@ -17,5 +19,7 @@ public class Beans {
 	public void setDssert(Dssert dssert) {
 		this.dssert = dssert;
 	}
-	
+	public Dssert getDssert() {
+		return dssert;
+	}
 }

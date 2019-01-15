@@ -1,8 +1,10 @@
-package com.zjs.bwcx.spring.ambiguous.xml;
+package com.zjs.bwcx.spring.ambiguous.nomal;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 
+@Component
 public class Beans {
 	
 	private Dssert dssert;

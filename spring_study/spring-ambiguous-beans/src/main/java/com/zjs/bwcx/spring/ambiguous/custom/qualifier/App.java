@@ -7,9 +7,9 @@ public class App {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
-		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class,ConfigurationQualifier.class);
+		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigurationQualifier.class);
 		Beans bean = (Beans) applicationContext.getBean("beans");
-		System.out.println(bean);
+		System.out.println(bean.getDssert());
 	}
 	
 }

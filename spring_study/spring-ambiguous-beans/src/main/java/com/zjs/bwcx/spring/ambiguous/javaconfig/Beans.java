@@ -8,5 +8,9 @@ public class Beans {
 	public Beans(Dssert dssert) {
 		this.dssert = dssert;
 	}
+
+	public Dssert getDssert() {
+		return dssert;
+	}
 	
 }

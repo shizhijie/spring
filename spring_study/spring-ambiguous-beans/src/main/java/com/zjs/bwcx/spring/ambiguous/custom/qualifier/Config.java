@@ -8,10 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Config {
 	
-	/*@Bean
-	public Beans beans(Dssert dssert) {
-		return new Beans(dssert);
-	}*/
 	
 	@Bean
 	public Cake cake() {
@@ -19,14 +15,9 @@ public class Config {
 	}
 	
 	@Bean
+	@Qualifier("shizhijie")
 	public Cookies cookies() {
 		return new Cookies();
-	}
-	
-	@Bean 
-	@Qualifier
-	public IceCream iceCream() {
-		return new IceCream();
 	}
 	
 }
