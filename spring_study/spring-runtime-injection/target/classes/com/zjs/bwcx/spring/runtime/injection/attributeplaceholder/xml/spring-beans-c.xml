@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+      					http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="classpath:app.properties" />
+
+	<!-- <bean id="blankDisc"
+		class="com.zjs.bwcx.spring.runtime.injection.attributeplaceholder.xml.BlankDisc"
+		c:title="${disc.title}" c:artist="${disc.artist}" /> -->
+		
+		<!-- <bean id="blankDisc"
+		class="com.zjs.bwcx.spring.runtime.injection.attributeplaceholder.xml.BlankDisc"
+		c:_0="${disc.title}" c:_1="${disc.artist}" /> -->
+		
+		<!-- <bean id="blankDisc" class="com.zjs.bwcx.spring.runtime.injection.attributeplaceholder.xml.BlankDisc">
+			<property name="title" value="${disc.title}"/>
+			<property name="artist" value="${disc.artist}"/>
+		</bean> -->
+		
+		
+		<bean id="blankDisc" class="com.zjs.bwcx.spring.runtime.injection.attributeplaceholder.xml.BlankDisc">
+			<constructor-arg name="title" value="${disc.title}" />
+			<constructor-arg name="artist" value="${disc.artist}" />
+		</bean>
+</beans>
