@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="cake" class="com.zjs.bwcx.spring.ambiguous.xml.Cake" />
+	<bean id="cookies"
+		class="com.zjs.bwcx.spring.ambiguous.xml.Cookies" /> -->
+	<bean id="iceCream"
+		class="com.zjs.bwcx.spring.ambiguous.xml.IceCream" primary="true"/>
+	<!-- <bean id="beans" class="com.zjs.bwcx.spring.ambiguous.xml.Beans" /> -->
+</beans>
