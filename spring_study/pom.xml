@@ -83,5 +83,6 @@
 		<module>spring-conditional-bean-spring4After</module>
 		<module>spring-ambiguous-beans</module>
 		<module>spring-scope-beans</module>
+		<module>spring-runtime-injection</module>
 	</modules>
 </project>
