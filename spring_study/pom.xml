@@ -75,6 +75,6 @@
 		<module>spring-mixed</module>
 		<module>spring-profile-advanced-assembly</module>
 		<module>spring-conditional-bean-spring4After</module>
-		<module>srping-ambiguous-beans</module>
+		<module>spring-ambiguous-beans</module>
 	</modules>
 </project>
