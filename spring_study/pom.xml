@@ -52,7 +52,7 @@
 				<artifactId>spring-jdbc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
@@ -71,6 +71,34 @@
 				<artifactId>h2</artifactId>
 				<version>${h2.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>1.9.2</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.9.2</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/cglib/cglib -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>3.2.10</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<modules>
@@ -84,5 +112,6 @@
 		<module>spring-ambiguous-beans</module>
 		<module>spring-scope-beans</module>
 		<module>spring-runtime-injection</module>
+		<module>spring-aop-aspectj</module>
 	</modules>
 </project>
