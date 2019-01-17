@@ -19,10 +19,6 @@
 		class="com.zjs.bwcx.spring.aop.allbasedxmlaround.Singer" />
 		
 	<aop:config>
-		
-	</aop:config>
-		
-	<aop:config>
 		<aop:pointcut
 				expression="execution(** com.zjs.bwcx.spring.aop.allbasedxmlaround.Performance.perform(..))"
 				id="performance" />
