@@ -18,10 +18,13 @@
 	<bean id="singer"
 		class="com.zjs.bwcx.spring.aop.allbasedxmlpointcutextract.Singer" />
 	<aop:config>
-		<aop:aspect ref="audience">
-			<aop:pointcut
+		<aop:pointcut
 				expression="execution(** com.zjs.bwcx.spring.aop.allbasedxmlpointcutextract.Performance.perform(..))"
 				id="performance" />
+		<aop:aspect ref="audience">
+			<!-- <aop:pointcut
+				expression="execution(** com.zjs.bwcx.spring.aop.allbasedxmlpointcutextract.Performance.perform(..))"
+				id="performance" /> -->
 			<aop:before pointcut-ref="performance"
 				method="silenceCellPhones" />
 
