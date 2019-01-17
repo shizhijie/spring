@@ -1,4 +1,4 @@
-package com.zjs.bwcx.spring.aop.com.zjs.bwcx.spring.aop.allbasedxmlaround;
+package com.zjs.bwcx.spring.aop.allbasedxmlaround;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -14,9 +14,9 @@
 	<!--启用aspectj自动代理 -->
 	<aop:aspectj-autoproxy />
 	<bean id="audience"
-		class="com.zjs.bwcx.spring.aop.com.zjs.bwcx.spring.aop.allbasedxmlaround.Audience" />
+		class="com.zjs.bwcx.spring.aop.allbasedxmlaround.Audience" />
 	<bean id="singer"
-		class="com.zjs.bwcx.spring.aop.com.zjs.bwcx.spring.aop.allbasedxmlaround.Singer" />
+		class="com.zjs.bwcx.spring.aop.allbasedxmlaround.Singer" />
 		
 	<aop:config>
 		
@@ -24,7 +24,7 @@
 		
 	<aop:config>
 		<aop:pointcut
-				expression="execution(** com.zjs.bwcx.spring.aop.com.zjs.bwcx.spring.aop.allbasedxmlaround.Performance.perform(..))"
+				expression="execution(** com.zjs.bwcx.spring.aop.allbasedxmlaround.Performance.perform(..))"
 				id="performance" />
 		<aop:aspect ref="audience">
 			<aop:around method="watchPerformance" pointcut-ref="performance"/>

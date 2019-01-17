@@ -1,4 +1,4 @@
-package com.zjs.bwcx.spring.aop.com.zjs.bwcx.spring.aop.allbasedxmlaround;
+package com.zjs.bwcx.spring.aop.allbasedxmlaround;
 
 public class Singer implements Performance{
 
