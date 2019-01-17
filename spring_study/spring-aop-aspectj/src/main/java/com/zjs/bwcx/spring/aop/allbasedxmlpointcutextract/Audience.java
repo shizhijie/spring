@@ -1,7 +1,5 @@
 package com.zjs.bwcx.spring.aop.allbasedxmlpointcutextract;
 
-import org.aspectj.lang.annotation.AfterReturning;
-
 public class Audience {
 	
 	public void performance() {}
@@ -14,7 +12,6 @@ public class Audience {
 		System.out.println("Tasking seats");
 	}
 	
-	@AfterReturning("performance()")
 	public void applause() {//表演成功 喝彩鼓掌
 		System.out.println("CLAP CLAP CLAP!!!");
 	}
