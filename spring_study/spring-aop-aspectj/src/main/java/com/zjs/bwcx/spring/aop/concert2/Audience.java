@@ -1,5 +1,6 @@
 package com.zjs.bwcx.spring.aop.concert2;
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -30,6 +31,11 @@ public class Audience {
 	@AfterThrowing("performance()")
 	public void demandRefund() {// 表演失败之后 要求退款
 		System.out.println("Demanding a refund");
+	}
+	
+	@After("performance()")
+	public void end() {//表演成功 喝彩鼓掌
+		System.out.println("i am after");
 	}
 	
 }
