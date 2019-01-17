@@ -9,7 +9,6 @@ import com.zjs.bwcx.spring.ambiguous.javaconfig.Dssert;
 @Component
 public class Beans {
 	
-	@SuppressWarnings("unused")
 	private Dssert dssert;
 	
 	@Autowired

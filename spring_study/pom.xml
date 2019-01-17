@@ -78,6 +78,12 @@
 				<version>${spring.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
 			<dependency>
 				<groupId>org.aspectj</groupId>
@@ -99,6 +105,14 @@
 				<version>3.2.10</version>
 			</dependency>
 
+			<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>4.0.1</version>
+				<!-- <scope>provided</scope> -->
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<modules>
@@ -113,5 +127,6 @@
 		<module>spring-scope-beans</module>
 		<module>spring-runtime-injection</module>
 		<module>spring-aop-aspectj</module>
+		<module>spring-web-mvc-spittr</module>
 	</modules>
 </project>
