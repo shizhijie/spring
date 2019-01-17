@@ -21,11 +21,11 @@ public aspect CriticAspect {
 	
 	private CriticismEngine criticismEngine;
 
-    pointcut performanced():execution(* com.zjs.bwcx.aspectj.aop.Performance.perform(..));
+    pointcut performance():execution(* com.zjs.bwcx.aspectj.aop.Performance.perform(..));
 
     pointcut construct():execution(com.zjs.bwcx.aspectj.aop.CriticismEngineImpl.new());
 
-    after():performanced(){
+    after():performance(){
         System.out.println(criticismEngine.getCriticism());
     }
 
