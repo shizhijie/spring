@@ -16,6 +16,7 @@ import com.zjs.bwcx.spring.spittr.web.SpittleController;
 
 public class SpittleControllerTest {
 
+	@SuppressWarnings("unused")
 	@Test
 	public void shouldShowRecentSpittles() throws Exception {
 		List<Spittle> expectedSpittles = createSpittleList(20);
@@ -25,6 +26,7 @@ public class SpittleControllerTest {
 	        SpittleController controller = new SpittleController(mockRepository);
 	        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller)
 	                .setSingleView(new InternalResourceView("/WEB_INF/views/spittles.jsp")).build();
+	        
 	}
 
 	private List<Spittle> createSpittleList(int count) {
