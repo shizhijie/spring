@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller //声明一个控制器
 public class HomeController {
 	
-	@RequestMapping(value="/",method=RequestMethod.GET)
+	/*@RequestMapping(value="/",method=RequestMethod.GET)*/
+	@RequestMapping(value= {"/","/homepage"},method=RequestMethod.GET)
 	public String home() {
 		return "home";
 	}
