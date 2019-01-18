@@ -20,8 +20,8 @@ public class WebConfig extends /*WebMvcConfigurerAdapter过时5.0*/ WebMvcConfig
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/views");
-		resolver.setSuffix(".jps");
+		resolver.setPrefix("/WEB-INF/views/");
+		resolver.setSuffix(".jsp");
 		resolver.setExposeContextBeansAsAttributes(true);
 		return resolver;
 	}
@@ -30,7 +30,7 @@ public class WebConfig extends /*WebMvcConfigurerAdapter过时5.0*/ WebMvcConfig
 	 * 配置静态资源的处理
 	 */
 	@Override
-	protected void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
 	
