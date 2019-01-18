@@ -13,7 +13,7 @@ public class SpittleRepositoryImpl implements SpittleRepository {
 	public List<Spittle> findSpittles(long max, int count) {
 		List<Spittle> spittleList = new ArrayList<>();
 		for (int i = 0; i < count; i++) {
-			spittleList.add(new Spittle("Spittle (from IMPL) ID#" + i, new Date()));
+			spittleList.add(new Spittle("Spittle (from IMPL) ID#" + i, new Date(11111111)));
 		}
 		return spittleList;
 	}

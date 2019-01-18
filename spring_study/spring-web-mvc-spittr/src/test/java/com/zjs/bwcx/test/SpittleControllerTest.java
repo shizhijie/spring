@@ -1,5 +1,10 @@
 package com.zjs.bwcx.test;
 
+import static org.hamcrest.CoreMatchers.hasItem;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,7 +21,6 @@ import com.zjs.bwcx.spring.spittr.web.SpittleController;
 
 public class SpittleControllerTest {
 
-	@SuppressWarnings("unused")
 	@Test
 	public void shouldShowRecentSpittles() throws Exception {
 		List<Spittle> expectedSpittles = createSpittleList(20);
@@ -26,13 +30,16 @@ public class SpittleControllerTest {
 		SpittleController controller = new SpittleController(mockRepository);
 		MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller)
 				.setSingleView(new InternalResourceView("/WEB_INF/views/spittles.jsp")).build();
+		mockMvc.perform(get("/spittles")).andExpect(view().name("spittles"))
+				.andExpect(model().attributeExists("spittleList"))
+				.andExpect(model().attribute("spittleList", hasItem(expectedSpittles.toArray())));
 
 	}
 
 	private List<Spittle> createSpittleList(int count) {
 		List<Spittle> spittles = new ArrayList<>();
 		for (int i = 0; i < count; i++) {
-			spittles.add(new Spittle("Spittle ID#" + i, new Date()));
+			spittles.add(new Spittle("Spittle (from IMPL) ID#" + i, new Date(11111111)));
 		}
 		return spittles;
 	}
