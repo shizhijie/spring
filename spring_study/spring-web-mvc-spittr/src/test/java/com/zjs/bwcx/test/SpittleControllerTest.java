@@ -20,13 +20,13 @@ public class SpittleControllerTest {
 	@Test
 	public void shouldShowRecentSpittles() throws Exception {
 		List<Spittle> expectedSpittles = createSpittleList(20);
-		 SpittleRepository mockRepository = Mockito.mock(SpittleRepository.class);
-	        Mockito.when(mockRepository.findSpittles(Long.MAX_VALUE, 20)).thenReturn(expectedSpittles);
+		SpittleRepository mockRepository = Mockito.mock(SpittleRepository.class);
+		Mockito.when(mockRepository.findSpittles(Long.MAX_VALUE, 20)).thenReturn(expectedSpittles);
 
-	        SpittleController controller = new SpittleController(mockRepository);
-	        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller)
-	                .setSingleView(new InternalResourceView("/WEB_INF/views/spittles.jsp")).build();
-	        
+		SpittleController controller = new SpittleController(mockRepository);
+		MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller)
+				.setSingleView(new InternalResourceView("/WEB_INF/views/spittles.jsp")).build();
+
 	}
 
 	private List<Spittle> createSpittleList(int count) {
