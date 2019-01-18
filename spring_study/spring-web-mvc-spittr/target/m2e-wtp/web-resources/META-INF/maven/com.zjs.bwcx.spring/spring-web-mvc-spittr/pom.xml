@@ -51,6 +51,11 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
+
+		<!-- <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-mock</artifactId>
+		</dependency> -->
 	</dependencies>
 
 	<build>
@@ -64,8 +69,8 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			
-			<!--解决  web.xml is missing and <failOnMissingWebXml> is set to true-->
+
+			<!--解决 web.xml is missing and <failOnMissingWebXml> is set to true -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
