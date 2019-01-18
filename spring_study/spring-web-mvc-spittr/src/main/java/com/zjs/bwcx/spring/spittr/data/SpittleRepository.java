@@ -9,4 +9,6 @@ public interface SpittleRepository {
 	 * @return
 	 */
 	List<Spittle> findSpittles(long max, int count);
+
+	Object findOne(long spittled);
 }
