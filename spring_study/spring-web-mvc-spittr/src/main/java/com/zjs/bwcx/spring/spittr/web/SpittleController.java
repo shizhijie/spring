@@ -11,6 +11,7 @@ import com.zjs.bwcx.spring.spittr.data.SpittleRepository;
 
 @Controller
 @ComponentScan("com.zjs.bwcx.spring.spittr.data")
+@RequestMapping("/spittles")
 public class SpittleController {
 
 	private SpittleRepository spittleRepository;
@@ -21,7 +22,7 @@ public class SpittleController {
 	}
 
 
-	@RequestMapping(value = "/spittles", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public String spittles(Model model) {
 		model.addAttribute("spittleList", spittleRepository.findSpittles(Long.MAX_VALUE, 20));
 		return "spittles";
