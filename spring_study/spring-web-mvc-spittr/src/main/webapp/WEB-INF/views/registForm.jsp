@@ -49,7 +49,26 @@
   		<!-- 赋值取值 -->
   		<%-- <spring:url value="/spitter/register" var="registerUrl"/>
   		<input type="text" value="${registerUrl}"/> --%>
+  		
+  		<spring:url value="/spittles" htmlEscape="true">
+  			<spring:param name="max" value="60"/>
+  			<spring:param name="count" value="20"/>
+  		</spring:url>
+  		
+  		<spring:url value="/spittles" var="spittlesJSUrl" javaScriptEscape="true">
+  			<spring:param name="max" value="60"/>
+  			<spring:param name="count" value="20"/>
+  		</spring:url>
   	</sf:form>
+  	
+  	<spring:escapeBody htmlEscape="true">
+  		<h1>Hello</h1>
+  	</spring:escapeBody>
+  	
+  	<script type="text/javascript">
+  		var spittlesJSUrl = "${spittlesJSUrl}";
+  		//alert(spittlesJSUrl)
+  	</script>
   	
   	<%-- <sf:form method="post" modelAttribute="spitter">
   		<sf:label path="firstName" cssErrorClass="error">First name(名字)</sf:label>:
