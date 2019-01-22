@@ -13,7 +13,7 @@
     <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
   </definition>
 
-  <definition name="registerForm" extends="base">
+  <definition name="registForm" extends="base">
     <put-attribute name="body" value="/WEB-INF/views/registForm.jsp" />
   </definition>
 

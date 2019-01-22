@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="t" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page session="false" %>
 <html>
   <head>
@@ -7,7 +8,6 @@
     <link rel="stylesheet" 
           type="text/css" 
           href="<s:url value="/resources/style.css" />" >
-          <!-- <link rel="stylesheet" href="../../resources/style.css" type="text/css" /> -->
   </head>
   <body>
     <div id="header">
