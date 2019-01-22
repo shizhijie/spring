@@ -13,6 +13,7 @@
 		<junit.version>4.12</junit.version>
 		<dbcp2.version>2.5.0</dbcp2.version>
 		<h2.version>1.3.168</h2.version>
+		<tiles.version>3.0.7</tiles.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -149,6 +150,34 @@
 				<artifactId>hibernate-validator</artifactId>
 				<version>6.1.0.Alpha2</version>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.tiles/tiles-jsp -->
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-jsp</artifactId>
+				<version>${tiles.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-api</artifactId>
+				<version>${tiles.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-core</artifactId>
+				<version>${tiles.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-servlet</artifactId>
+				<version>${tiles.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-template</artifactId>
+				<version>${tiles.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<modules>
@@ -164,5 +193,6 @@
 		<module>spring-runtime-injection</module>
 		<module>spring-aop-aspectj</module>
 		<module>spring-web-mvc-spittr</module>
+		<module>spring-web-mvc-spittr-tiles</module>
 	</modules>
 </project>
