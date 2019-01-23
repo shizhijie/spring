@@ -2,13 +2,11 @@ package com.zjs.bwcx.spring.spittr.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.servlet.ViewResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
 @Configuration
-@ImportResource(locations = { "classpath:servlet-context.xml" })
 public class ThymeleafConfig {
 
 	@Bean
