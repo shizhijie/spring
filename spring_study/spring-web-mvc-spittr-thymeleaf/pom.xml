@@ -91,7 +91,7 @@
 		<!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf-spring4 -->
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
-			<artifactId>thymeleaf-spring5</artifactId>
+			<artifactId>thymeleaf-spring4</artifactId>
 		</dependency>
 
 		<dependency>
