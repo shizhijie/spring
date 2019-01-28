@@ -13,13 +13,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.zjs.bwcx.spring.spittr.data.Spittle;
 import com.zjs.bwcx.spring.spittr.data.SpittleRepository;
+import com.zjs.bwcx.spring.spittr.exception.SpittleNotFoundException;
 
 @Controller
 @ComponentScan("com.zjs.bwcx.spring.spittr.data")
 @RequestMapping("/spittles")
 public class SpittleController {
-	
-	//private static final String MAX_LONG_AS_STRING = Long.toString(Long.MAX_VALUE);
+
+	// private static final String MAX_LONG_AS_STRING =
+	// Long.toString(Long.MAX_VALUE);
 
 	private SpittleRepository spittleRepository;
 
@@ -40,10 +42,10 @@ public class SpittleController {
 	 * spittleRepository.findSpittles(Long.MAX_VALUE, 20)); return "spittles"; }
 	 */
 
-	/*@RequestMapping(method = RequestMethod.GET)
-	public List<Spittle> spittles() {
-		return spittleRepository.findSpittles(Long.MAX_VALUE, 20);
-	}*/
+	/*
+	 * @RequestMapping(method = RequestMethod.GET) public List<Spittle> spittles() {
+	 * return spittleRepository.findSpittles(Long.MAX_VALUE, 20); }
+	 */
 
 	/*
 	 * @RequestMapping(method = RequestMethod.GET) public List<Spittle>
@@ -56,17 +58,30 @@ public class SpittleController {
 			@RequestParam(value = "count", defaultValue = "20") int count) {
 		return spittleRepository.findSpittles(max, count);
 	}
-	
-	/*@RequestMapping(value="/{spittled}",method=RequestMethod.GET)
-	public String spittle(@PathVariable("spittled") long spittled,Model model) {
-		return "home";
-	}*/
-	
-	@RequestMapping(value="/{spittled}",method=RequestMethod.GET)
-	public String spittle(@PathVariable long spittled,Model model) {
-		//model.addAttribute(spittleRepository.findOne(spittled));
-		model.addAttribute("spittle", spittleRepository.findOne(spittled));
+
+	/*
+	 * @RequestMapping(value="/{spittled}",method=RequestMethod.GET) public String
+	 * spittle(@PathVariable("spittled") long spittled,Model model) { return "home";
+	 * }
+	 */
+
+	/*
+	 * @RequestMapping(value="/{spittled}",method=RequestMethod.GET) public String
+	 * spittle(@PathVariable long spittled,Model model) {
+	 * //model.addAttribute(spittleRepository.findOne(spittled));
+	 * model.addAttribute("spittle", spittleRepository.findOne(spittled)); return
+	 * "spittle"; }
+	 */
+
+	@SuppressWarnings("unused")
+	@RequestMapping(value = "/{spittled}", method = RequestMethod.GET)
+	public String spittle(@PathVariable long spittled, Model model) {
+		// model.addAttribute(spittleRepository.findOne(spittled));
+		// model.addAttribute("spittle", spittleRepository.findOne(spittled));
+		Spittle spittle = null;
+		if (spittle == null) {
+			throw new SpittleNotFoundException();
+		}
 		return "spittle";
 	}
-	
 }
