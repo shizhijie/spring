@@ -64,7 +64,8 @@ public class SpittleController {
 	
 	@RequestMapping(value="/{spittled}",method=RequestMethod.GET)
 	public String spittle(@PathVariable long spittled,Model model) {
-		model.addAttribute(spittleRepository.findOne(spittled));
+		//model.addAttribute(spittleRepository.findOne(spittled));
+		model.addAttribute("spittle", spittleRepository.findOne(spittled));
 		return "spittle";
 	}
 	

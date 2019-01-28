@@ -15,6 +15,8 @@ public class ThymeleafConfig {
 	public ViewResolver viewResolver(org.thymeleaf.spring4.SpringTemplateEngine templateEngine) {
 		org.thymeleaf.spring4.view.ThymeleafViewResolver viewResolver = new org.thymeleaf.spring4.view.ThymeleafViewResolver();
 		viewResolver.setTemplateEngine(templateEngine);
+		viewResolver.setCharacterEncoding("UTF-8");
+		viewResolver.setOrder(1);
 		return viewResolver;
 	}
 
@@ -30,7 +32,9 @@ public class ThymeleafConfig {
 		TemplateResolver templateResolver = new ServletContextTemplateResolver();
 		templateResolver.setPrefix("/WEB-INF/views/");
 		templateResolver.setSuffix(".html");
+		templateResolver.setCharacterEncoding("UTF-8");
 		templateResolver.setTemplateMode("HTML5");
+		templateResolver.setCacheable(true);
 		return templateResolver;
 	}
 }
