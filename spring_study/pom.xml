@@ -229,5 +229,6 @@
 		<module>spring-web-mvc-spittr-tiles</module>
 		<module>spring-web-mvc-spittr-thymeleaf</module>
 		<module>spring-web-mvc-spittr-multipart</module>
+		<module>spring-web-mvc-spittr-exception</module>
 	</modules>
 </project>
