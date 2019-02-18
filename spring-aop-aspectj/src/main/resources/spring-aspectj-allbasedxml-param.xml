@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/aop
+                        http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!--启用aspectj自动代理 -->
+	<aop:aspectj-autoproxy />
+	<bean id="trackCounter"
+		class="com.zjs.bwcx.spring.aop.allbasedxmlparam.TrackCounter" />
+	<bean id="cd"
+		class="com.zjs.bwcx.spring.aop.allbasedxmlparam.BlankDisc">
+		<property name="title"
+			value="Sgt. Pepper's Lonely Hearts Club Band" />
+		<property name="artist" value="The Beatles" />
+		<property name="tracks">
+			<list>
+				<value>Sgt. Pepper's Lonely Hearts Club Band</value>
+				<value>With a Little Help from My Friends</value>
+				<value>Lucy in the Sky with Diamonds</value>
+				<value>Getting Better</value>
+				<value>Fixing a Hole</value>
+			</list>
+		</property>
+	</bean>
+
+	<aop:config>
+		<aop:pointcut
+			expression="execution(* com.zjs.bwcx.spring.aop.allbasedxmlparam.BlankDisc.play(..))"
+			id="play" />
+		<aop:pointcut
+			expression="execution(* com.zjs.bwcx.spring.aop.allbasedxmlparam.BlankDisc.playTrack(Integer)) and args(trackNumber)"
+			id="trackPlayed" />
+		<aop:aspect ref="trackCounter">
+			<aop:before method="countTrack" pointcut-ref="trackPlayed" />
+			<aop:before method="test2" pointcut-ref="play" />
+			<aop:before method="test1" pointcut-ref="play" />
+		</aop:aspect>
+		
+		
+		
+		<!-- <aop:pointcut
+			expression="execution(* com.zjs.bwcx.spring.aop.allbasedxmlparam.BlankDisc.playTrack(int)) and args(trackNumber)"
+			id="trackPlayed" />  错误 int 采用Integer或者.. -->
+	</aop:config>
+</beans>
